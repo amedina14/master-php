@@ -13,7 +13,7 @@ if(condizione){
 } else {
     altra istruzione
 }
-// Operatori di comnfronto
+// Operatori di confronto
  * == uguale: stesso valore;
  * === identico: stesso tipo di dato e valore;
  * != diverso
@@ -23,7 +23,13 @@ if(condizione){
  * > maggiore che
  * <= minore uguale
  * >= maggiore uguale
- * 
+
+ // Operatori logici
+ &&: AND
+ ||: OR
+ ! : NOT
+ and, or
+ 
  */
 echo '<hr/><p>Verifica del colore</p>';
 
@@ -98,7 +104,7 @@ function verificaDati($nome,$eta,$citta,$continente,$maggioriaEta){//funzione se
     }
 }
 
-echo '<br><hr/><p>Esempio 4: Dati di persona</p>';
+echo '<hr/><p>Esempio 4: Dati di persona</p>';
 echo '<p><a href="form.php">Form</a></p>';
 
 $maggioriaEta=18;
@@ -142,8 +148,39 @@ function giornoDellaSettimana($giorno){
     return $ris;
 }
 
-echo '<br><hr/>Esempio 5<br>';
+echo '<br><hr/>Esempio 5: Elseif<br>';
 $giorno = 7;
 $result = giornoDellaSettimana($giorno);
 echo "<p>$result</p>";
 
+// Esempio 6
+function etaLavorativa($etaUfficiale, $eta_minima, $eta_massima){
+    $result = "";
+    if($etaUfficiale >= $eta_minima && $etaUfficiale <= $eta_massima){
+        $result= 'La persona può lavorare';
+    } elseif ($etaUfficiale < $eta_minima) {
+        $result= 'Minorenne';
+    } elseif ($etaUfficiale > $eta_massima) {
+        $result= 'Pensionato';
+    }
+    return $result;
+}
+function ispano($paese){
+    $result = "";
+    if ($paese == "Mexico" || $paese == "Spagna" || $paese == "Ecuador"){
+        $result = "In questo paese si parla spagnolo";
+    } else{
+        $result = 'Non si parla spagnolo';
+    }
+    return $result;
+}
+
+echo '<hr/>Esempio 6: Operatori logici / Eta lavorativa<br>';
+$eta_minima=18;
+$eta_massima=64;
+$etaUfficiale=65;
+echo "<p>".etaLavorativa($etaUfficiale, $eta_minima, $eta_massima)."</p>";
+
+$paese = "Francia";
+echo '<br>Paesi che parlano spagnolo';
+echo '<p>'.ispano($paese)." - $paese".'</p>';
