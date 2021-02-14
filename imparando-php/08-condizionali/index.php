@@ -123,3 +123,27 @@ try{
 */
 //verificaDati($nome, $eta, $citta, $continente, $maggioriaEta);
 
+// Esempio 5
+function giornoDellaSettimana($giorno){
+    $ris="";
+    if($giorno == 1){
+        $ris= "Lunedi";
+    } elseif ($giorno == 2){
+        $ris= 'Martedi';
+    } elseif ($giorno == 3) {
+        $ris= 'Mercoledi';
+    } elseif ($giorno == 4){
+        $ris= 'Giovedi';
+    } elseif ($giorno == 5) {
+        $ris= 'Venerdi';
+    } else {
+        $ris= 'Weekend';
+    }
+    return $ris;
+}
+
+echo '<br><hr/>Esempio 5<br>';
+$giorno = 7;
+$result = giornoDellaSettimana($giorno);
+echo "<p>$result</p>";
+
