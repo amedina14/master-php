@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>Form in PHP</h1>
-        <form method="GET" action="ricevere.php">
+        <form method="POST" action="ricevere.php"> <!--method="GET"-->
             <p>
             <label for="nome">Nome</label>
             <input name="nome" placeholder="Inserisci il tuo nome.." />
