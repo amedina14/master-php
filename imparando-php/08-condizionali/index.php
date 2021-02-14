@@ -184,3 +184,39 @@ echo "<p>".etaLavorativa($etaUfficiale, $eta_minima, $eta_massima)."</p>";
 $paese = "Francia";
 echo '<br>Paesi che parlano spagnolo';
 echo '<p>'.ispano($paese)." - $paese".'</p>';
+
+// SWITCH
+echo '<hr/>SWITCH: Giorno della settimana<br><br>';
+$giorno_switch = 4;
+switch ($giorno_switch){
+    case 1:
+        echo "Lunedi";
+        break;
+    case 2:
+        echo "Martedi";
+        break;
+    case 3:
+        echo "Mercoledi";
+        break;
+    case 4:
+        echo "Giovedi";
+        break;
+    case 5:
+        echo "Venerdi";
+        break;
+    default:
+        echo "Weekend";
+}
+
+// GOTO
+echo "<br><hr/>GOTO";
+goto segno;
+
+echo "Istruzione 1";
+echo "Istruzione 2";
+echo "Istruzione 3";
+echo "Istruzione 4";
+
+segno:
+    echo "<p>Mi sono saltato 4 istruzioni</p>";
+
