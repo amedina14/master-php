@@ -82,5 +82,27 @@ if($year<>2021){
     echo 'L\'anno è <b>uguale</b> al 2021';    
 }
 
+/* 
+ * Esempio 4
+ */
+function verificaDati($nome,$eta,$citta,$continente,$maggioriaEta){//funzione senza ritorno    
+    if($eta>=$maggioriaEta){
+        echo "$nome è maggiorenne";
+        if ($continente=="Europa"){
+            echo '<br>è della città: '.$citta;
+        } else {
+            echo '<br>'.$nome.' Non è europeo';
+        }
+    } else {
+        echo "$nome è minorenne";
+    }
+}
 
-        
+echo '<br><hr/><p>Esempio 4: Dati di persona</p>';
+$nome="Adrian Medina";
+$eta=24;
+$citta="Foligno";
+$continente="Europa";
+$maggioriaEta=18;
+
+verificaDati($nome, $eta, $citta, $continente, $maggioriaEta);
