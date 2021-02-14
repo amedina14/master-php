@@ -99,10 +99,27 @@ function verificaDati($nome,$eta,$citta,$continente,$maggioriaEta){//funzione se
 }
 
 echo '<br><hr/><p>Esempio 4: Dati di persona</p>';
-$nome="Adrian Medina";
-$eta=24;
-$citta="Foligno";
-$continente="Europa";
+echo '<p><a href="form.php">Form</a></p>';
+
 $maggioriaEta=18;
 
+// $nome && $eta && $citta && $continente
+$nome= "Adrian Medina";
+$eta= 24;
+$citta= "Foligno";
+$continente= "Europa";
+
 verificaDati($nome, $eta, $citta, $continente, $maggioriaEta);
+
+/*
+try{
+    $nome= $_POST['nome'];//"Adrian Medina";
+    $eta=$_POST['eta'];//24;
+    $citta=$_POST['citta'];//"Foligno";
+    $continente=$_POST['continente'];//"Europa";
+} catch (ErrorException $ex){
+    echo 'Errore';
+}
+*/
+//verificaDati($nome, $eta, $citta, $continente, $maggioriaEta);
+
