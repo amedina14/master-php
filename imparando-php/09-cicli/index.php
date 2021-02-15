@@ -18,3 +18,21 @@ while($num <= 10){
 
     $num+=1;
 }
+
+// Esempio: Tabella moltiplicazioni
+echo "<br><hr/>";
+
+if(isset($_GET['numero'])){
+    $numero=(int)$_GET['numero'];
+} else{
+    $numero=1;
+}
+echo "<h3>Tabella di moltiplicazione del $numero</h3>";
+var_dump($numero);
+$c=1;
+while ($c<=10){
+    echo "<p>$numero x $c = ".($numero*$c)."</p>";
+    $c++;
+}
+/*
+ */
