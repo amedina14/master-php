@@ -34,5 +34,28 @@ while ($c<=10){
     echo "<p>$numero x $c = ".($numero*$c)."</p>";
     $c++;
 }
+
+// DO WHILE
 /*
+do{
+    // blocco istruzioni    
+} while(condizione);
  */
+echo '<hr/><h3>Do While: </h3>';
+$eta = 18;
+$c=1;
+$flag=false;
+do{
+    echo "Persona $c. Hai accesso alla lobby<br>";
+    if($eta>=18){
+        $flag=true;
+    }
+    if($flag){
+        echo "Sei maggiorenne. Hai accesso al posto riservato persona $c<br><br>";
+    }
+    $c++;
+}while($eta >= 18 && $c<10);
+
+
+
+
