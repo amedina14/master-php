@@ -1,5 +1,12 @@
+<style>
+    #tabelline{
+        width: 50%;
+        float: left;
+    }
+</style>
 <?php
 
+echo '<div id="tabelline">';
 function tabellina($n) {
     echo "Tabellina del $n";
     for ($i = 1; $i <= 10; $i++) {
@@ -17,20 +24,32 @@ if (isset($_GET['n'])) {
         tabellina($i);
     }
 }
+echo '</div>';
 
+// Esempio funzione: Calcolatrice, Parametri opzionali
+function calcolatrice($num1, $num2, $grassetto = false) {
+    $somma = $num1 + $num2;
+    $resta = $num1 - $num2;
+    $molti = $num1 * $num2;
+    $div = $num1 / $num2;
 
-// Esempio funzione: Calcolatrice
-function calcolatrice($num1, $num2){
-    $somma=$num1+$num2;
-    $resta=$num1-$num2;
-    $molti=$num1*$num2;
-    $div=$num1/$num2;
+    if ($grassetto != false) {
+        echo "<h1>";
+    }
     echo "Somma: $somma</br>";
     echo "Resta: $resta</br>";
     echo "Moltiplicazione: $molti</br>";
     echo "Divisionse: $div</br>";
+    if ($grassetto != false) {
+        echo "</h1>";
+    }
 }
+
 echo "<hr/>";
 echo "<b>Calcolatrice con funzione</b></br>";
-calcolatrice($num1=2, $num2=2);
+calcolatrice($num1 = 2, $num2 = 2, true);
+echo "<hr/>";
+
+echo "<b>Calcolatrice con funzione</b></br>";
+calcolatrice($num1 = 3, $num2 = 2, false);
 echo "<hr/>";
