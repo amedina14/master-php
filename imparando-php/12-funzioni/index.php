@@ -18,3 +18,19 @@ if (isset($_GET['n'])) {
     }
 }
 
+
+// Esempio funzione: Calcolatrice
+function calcolatrice($num1, $num2){
+    $somma=$num1+$num2;
+    $resta=$num1-$num2;
+    $molti=$num1*$num2;
+    $div=$num1/$num2;
+    echo "Somma: $somma</br>";
+    echo "Resta: $resta</br>";
+    echo "Moltiplicazione: $molti</br>";
+    echo "Divisionse: $div</br>";
+}
+echo "<hr/>";
+echo "<b>Calcolatrice con funzione</b></br>";
+calcolatrice($num1=2, $num2=2);
+echo "<hr/>";
