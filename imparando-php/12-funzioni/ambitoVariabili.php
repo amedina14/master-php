@@ -15,3 +15,26 @@ function stampa() {
 }
 
 echo stampa();
+
+//Funzioni variabili
+/*
+ * Si salva il nome di una fx in una variabile 'x' 
+ * e poi per usarla si invoca 'x()'.
+ */
+
+function buongiorno(){
+    return "Ciao, buongiorno!";
+}
+function buonasera(){
+    return "Ciao, buonasera!";
+}
+function buonanotte(){
+    return "Buonanotte!";
+}
+
+$orario=$_GET['orario'];
+$myFunction="buon".$orario;
+echo '<hr/><p>Funzioni variabili</p>'.$myFunction();
+
+$giorno="buongiorno";
+echo '<p>'.$giorno().'</p>';
