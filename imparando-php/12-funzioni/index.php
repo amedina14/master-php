@@ -33,23 +33,28 @@ function calcolatrice($num1, $num2, $grassetto = false) {
     $molti = $num1 * $num2;
     $div = $num1 / $num2;
 
+    $stringa_testo="";
+
     if ($grassetto != false) {
-        echo "<h1>";
+        $stringa_testo.= "<h1>";
     }
-    echo "Somma: $somma</br>";
-    echo "Resta: $resta</br>";
-    echo "Moltiplicazione: $molti</br>";
-    echo "Divisionse: $div</br>";
+
+    $stringa_testo.= "Somma: $somma</br>";
+    $stringa_testo.= "Resta: $resta</br>";
+    $stringa_testo.= "Moltiplicazione: $molti</br>";
+    $stringa_testo.= "Divisionse: $div</br>";
+
     if ($grassetto != false) {
-        echo "</h1>";
+        $stringa_testo.= "</h1>";
     }
+    return $stringa_testo;
 }
 
 echo "<hr/>";
 echo "<b>Calcolatrice con funzione</b></br>";
-calcolatrice($num1 = 2, $num2 = 2, true);
+echo calcolatrice($num1 = 2, $num2 = 2, true);
 echo "<hr/>";
 
 echo "<b>Calcolatrice con funzione</b></br>";
-calcolatrice($num1 = 3, $num2 = 2, false);
+echo calcolatrice($num1 = 3, $num2 = 2, false);
 echo "<hr/>";
