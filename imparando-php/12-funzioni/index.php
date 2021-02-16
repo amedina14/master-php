@@ -26,7 +26,7 @@ if (isset($_GET['n'])) {
 }
 echo '</div>';
 
-// Esempio funzione: Calcolatrice, Parametri opzionali
+// Esempio funzione: Calcolatrice, Parametri opzionali, Return
 function calcolatrice($num1, $num2, $grassetto = false) {
     $somma = $num1 + $num2;
     $resta = $num1 - $num2;
@@ -58,3 +58,23 @@ echo "<hr/>";
 echo "<b>Calcolatrice con funzione</b></br>";
 echo calcolatrice($num1 = 3, $num2 = 2, false);
 echo "<hr/>";
+
+// Funzioni dentro di altre
+
+function getNome($nome){
+    $testo = "Il nome è: $nome";
+    return $testo;
+}
+function getCognome($cognome){
+    $testo = "Il cognome è: $cognome";
+    return $testo;
+}
+function getNomeCompleto($nome,$cognome){    
+    $testo="";
+    $testo .= '<p>'.getNome($nome).'</p>';
+    $testo .= '<p>'. getCognome($cognome).'</p>';
+    return $testo;
+}
+
+echo "<h2>Funzione che invoca due funzione al suo interno: getNome e getCognome</h2>";
+echo '<h3>'.getNomeCompleto("Adrian", "Medina").'</h3><hr/>';
