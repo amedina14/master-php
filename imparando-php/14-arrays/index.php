@@ -44,16 +44,39 @@ echo $cantanti[2];
 // Percorrere l'array
 echo '<br><hr/><b>Iterare o percorrere array.</b>';
 echo '<ul>';
-echo '<p>Con for:</p>';
+echo '<p>Con for films:</p>';
 for ($i = 0; $i < count($films); $i++) {
     echo '<li>' . $films[$i] . '</li>';
 }
 echo '</ul>';
 
 echo '<ul>';
-echo '<p>Con foreach:</p>';
+echo '<p>Con foreach cantanti:</p>';
 foreach ($cantanti as $cantante) {
     echo '<li>' . $cantante . '</li>';
 }
 echo '</ul>';
+
+// Array multidimensionali
+echo '<br><hr/><b>Array multidimensionali</b>';
+$contatti = array(
+    array(
+        'nome' => 'Ernie',
+        'email' => 'ernie@mail.com'
+    ),
+    array(
+        'nome' => 'Ron',
+        'email' => 'ron@mail.com'
+    ),
+    array(
+        'nome' => 'Terry',
+        'email' => 'terry@mail.com'
+    ),
+);
+//var_dump($contatti);
+
+foreach ($contatti as $key => $contatto) {
+    echo '<p>Nome: ' . $contatto['nome'] .'<br>'
+        . 'Email: '. $contatto['email'] . '</p>';
+}
 
