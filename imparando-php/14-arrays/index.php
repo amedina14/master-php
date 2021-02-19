@@ -13,9 +13,27 @@ $film = "Batman";
 $films = array('Batman', 'Spiderman', 'Il signore degli anelli');
 $cantanti = ['2pac', 'Drake', 'JLoe'];
 
+
+// Array associativo (Map, dizionario);
+/*
+ * Quando si ricevono parametri per l'url vengono 
+ * contenuti in un array associativo
+ */
+$persone = array(
+    array(
+        "nome" => "Adrian",
+        "cognome" => "Medina",
+        "web" => "adrianmedina.it"
+    ),
+    ['nome' => 'Lucas', 'Cognome' => 'Bros', 'web' => 'lucasbros.com']
+);
+echo '<p>Persona 1 Nome: ' . $persone[0]["nome"] . '</p>';
+echo '<p>Persona 2 Nome: ' . $persone[1]["nome"] . '</p>';
+
+
 // Referenziamento e debug dei array
 var_dump($films);
-echo '<br>';
+echo '<br><hr/>';
 echo $films[1];
 
 echo '<br><br>';
@@ -27,15 +45,15 @@ echo $cantanti[2];
 echo '<br><hr/><b>Iterare o percorrere array.</b>';
 echo '<ul>';
 echo '<p>Con for:</p>';
-for($i=0;$i<count($films);$i++){
-    echo '<li>'.$films[$i].'</li>';
+for ($i = 0; $i < count($films); $i++) {
+    echo '<li>' . $films[$i] . '</li>';
 }
 echo '</ul>';
 
 echo '<ul>';
 echo '<p>Con foreach:</p>';
-foreach($cantanti as $cantante){
-    echo '<li>'.$cantante.'</li>';
+foreach ($cantanti as $cantante) {
+    echo '<li>' . $cantante . '</li>';
 }
 echo '</ul>';
 
